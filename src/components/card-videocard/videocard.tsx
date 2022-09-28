@@ -11,16 +11,22 @@ interface IVideocard {
 }
 
 function Videocard(videocard: IVideocard) {
-    const backgroundImage = videocard.image ? videocard.image : 
+  // const {} = useAppSelector(state => state.cardReducer)
+  // const {increment} = cardSlice.actions
+  // const dispatch = useAppDispatch();
+  const backgroundImage = videocard.image ? videocard.image : '';
   const viewStyle = {
-    background: videocard.image,
+    background: backgroundImage,
   };
 
   return (
     <div className="videocard">
       <div className="videocard__content content">
         <div className="content-view">
-            
+          <p className="content-view__crypto"></p>
+          <p className="content-view__chosen"></p>
+          <p className="content-view__image" style={viewStyle}></p>
+          <p className="content-view__order">Под заказ</p>
         </div>
         <div className="content-discription card-disc">
           <p className="card-disc-name"></p>
@@ -36,6 +42,13 @@ function Videocard(videocard: IVideocard) {
           <p className="card-disc__cost">
             <span> $</span>
             <span>{videocard.cost}</span>
+          </p>
+        </div>
+        <div className="videocard__counter counter">
+          <p className="counter-count"></p>
+          <p className="counter-control control">
+            <span className="control-minus"></span>
+            <span className="control-plus"></span>
           </p>
         </div>
       </div>
