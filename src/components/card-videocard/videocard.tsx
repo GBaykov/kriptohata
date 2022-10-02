@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { useState } from 'react';
 
 interface IVideocard {
   image: string;
@@ -14,6 +14,9 @@ function Videocard(videocard: IVideocard) {
   // const {} = useAppSelector(state => state.cardReducer)
   // const {increment} = cardSlice.actions
   // const dispatch = useAppDispatch();
+
+  const [count, setCount] = useState(0);
+
   const backgroundImage = videocard.image ? videocard.image : '';
   const viewStyle = {
     background: backgroundImage,
@@ -45,10 +48,24 @@ function Videocard(videocard: IVideocard) {
           </p>
         </div>
         <div className="videocard__counter counter">
-          <p className="counter-count"></p>
+          <p className="counter-count">{count}</p>
           <p className="counter-control control">
-            <span className="control-minus"></span>
-            <span className="control-plus"></span>
+            <span
+              className="control-minus"
+              onClick={() => {
+                setCount(count - 1);
+              }}
+            >
+              -
+            </span>
+            <span
+              className="control-plus"
+              onClick={() => {
+                setCount(count + 1);
+              }}
+            >
+              +
+            </span>
           </p>
         </div>
       </div>
