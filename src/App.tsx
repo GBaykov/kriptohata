@@ -12,11 +12,18 @@ function App() {
   return (
     <div className="app">
       <header className="app-header">
-        <a href="/" className=""></a>
-        <a href="/videocards" className="videocards"></a>
-        <a href="/newminers" className="new-miners"></a>
-        <a href="/oldminers" className="old-miners"></a>
+        <Link to="/" className=""></Link>
+        <Link to="/videocards" className="videocards"></Link>
+        <Link to="/newminers" className="new-miners"></Link>
+        <Link to="/oldminers" className="old-miners"></Link>
       </header>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/videocards" element={<VideocardsPage />} />
+        <Route path="/newminers" element={<NewMinersPage />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<HomePage />} />
+      </Routes>
     </div>
   );
 }
