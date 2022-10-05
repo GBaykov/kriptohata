@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  background-color: rgb(241, 237, 237);
+}
+.header-videocards {
+}
+.header-newminers {
+}
+.header-oldminers {
+}
+.header-item {
+  /* width: 30px; */
+  color: blue;
+}
+.header-item:hover {
+  cursor: pointer;
+}

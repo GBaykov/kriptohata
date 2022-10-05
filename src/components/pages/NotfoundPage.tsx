@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 export const NotfoundPage = () => {
   return (
-    <span className="notfound">
+    <section className="notfound">
       This page does not exist <Link to="/"> Home</Link>
-    </span>
+    </section>
   );
 };

@@ -1,14 +1,10 @@
 import { Link, Outlet } from 'react-router-dom';
+import Header from '../header';
 
 const Layout = () => {
   return (
     <>
-      <header className="layout">
-        <Link to="/" className=""></Link>
-        <Link to="/videocards" className="videocards"></Link>
-        <Link to="/newminers" className="new-miners"></Link>
-        <Link to="/oldminers" className="old-miners"></Link>
-      </header>
+      <Header />
       <Outlet />
       <footer>2022</footer>
     </>
