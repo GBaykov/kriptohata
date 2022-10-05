@@ -1,0 +1,39 @@
+.header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  background-color: #e5e5e5;
+}
+
+.header-wrapper {
+  margin: 20px 64px 0px 88px;
+}
+
+.header-videocards {
+}
+.header-newminers {
+}
+.header-oldminers {
+}
+.header-item {
+  /* width: 30px; */
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 16px;
+  color: #1a1b4b;
+  margin: 29px 0px;
+  text-decoration: none;
+}
+.header-item:not(:last-child) {
+  margin-right: 40px;
+}
+.header-item:hover {
+  cursor: pointer;
+}
+.active {
+  color: #4a5bcf;
+}
+
+.choices {
+  display: flex;
+}

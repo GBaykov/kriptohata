@@ -1,0 +1,64 @@
+.videocard {
+  border: 1px solid #f6f8fb;
+  border-radius: 8px;
+  width: 301px;
+  height: 612px;
+  box-sizing: border-box;
+  padding: 8px 8px 16px 8px;
+}
+.videocard__content {
+}
+.content {
+}
+.content-view {
+}
+.content-view__crypto {
+}
+.content-view__chosen {
+}
+.content-view__image {
+}
+.content-view__order {
+}
+.content-discription {
+}
+.card-disc {
+}
+.card-disc-name {
+}
+.card-disc-type {
+}
+.card-disc__items {
+}
+.items {
+}
+.items-text {
+}
+.card-disc__cost {
+}
+.videocard__counter {
+}
+.counter {
+}
+.counter-count {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  /* gap: 8px; */
+
+  width: 106px;
+  height: 48px;
+  background: #ffffff;
+  border: 1px solid #eaecee;
+  border-radius: 8px;
+}
+.counter-control {
+}
+.control {
+}
+.control-minus {
+}
+.control-plus {
+}

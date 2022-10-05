@@ -2,14 +2,34 @@ import React from 'react';
 import './App.css';
 import { useAppDispatch, useAppSelector } from './hooks/redux';
 import { userSlice } from './store/reducers/UserSlice';
+import { Routes, Route } from 'react-router-dom';
+import {
+  HomePage,
+  VideocardsPage,
+  NewMinersPage,
+  OldMinersPage,
+  HowOrderPage,
+} from './components/pages';
+import Layout from './components/layout';
+import { NotfoundPage } from './components/pages/NotfoundPage';
 
 function App() {
   // const {} = useAppSelector(state => state.userReducer)
   // const {increment} = userSlice.actions
   // const dispatch = useAppDispatch();
   return (
-    <div className="App">
-      <header className="App-header"></header>
+    <div className="app">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="" element={<HomePage />} />
+          <Route path="videocards" element={<VideocardsPage />} />
+          <Route path="newminers" element={<NewMinersPage />} />
+          <Route path="oldminers" element={<OldMinersPage />} />
+          <Route path="howorder" element={<HowOrderPage />} />
+          <Route path="*" element={<NotfoundPage />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
