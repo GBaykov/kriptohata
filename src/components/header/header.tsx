@@ -16,7 +16,7 @@ const Header = () => {
       <Link to="/oldminers" className="header-oldminers header-item">
         Майнеры Б/У
       </Link>
-      <Link to="/oldminers" className="header-oldminers header-item">
+      <Link to="/howorder" className="header-oldminers header-item">
         Как заказать
       </Link>
     </header>
