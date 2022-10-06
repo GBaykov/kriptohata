@@ -12,11 +12,13 @@ import {
 } from './components/pages';
 import Layout from './components/layout';
 import { NotfoundPage } from './components/pages/NotfoundPage';
+import { InputSlice } from './store/reducers/InputReducer';
 
 function App() {
-  // const {} = useAppSelector(state => state.userReducer)
-  // const {increment} = userSlice.actions
+  const { input } = useAppSelector((state) => state.InputReducer);
+  // const { addInputvalue } = InputSlice.actions;
   // const dispatch = useAppDispatch();
+  console.log('input from App component', input);
   return (
     <div className="app">
       <Routes>

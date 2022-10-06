@@ -1,12 +1,22 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+import { InputSlice } from '../../store/reducers/InputReducer';
 import './header.css';
 
 const Header = () => {
   const [inputValue, setInputValue] = useState('');
+  const { input } = useAppSelector((state) => state.InputReducer);
+  const { addInputvalue } = InputSlice.actions;
+  const dispatch = useAppDispatch();
 
   const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.currentTarget.value);
+  };
+
+  const onFormSubnit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    dispatch(addInputvalue(inputValue));
   };
 
   return (
@@ -50,7 +60,9 @@ const Header = () => {
             КриптоХата
           </p>
           <div className="header-searchbar">
-            <input type="text" onChange={onInputChange} value={inputValue} />
+            <form action="" onSubmit={onFormSubnit}>
+              <input type="text" onChange={onInputChange} value={inputValue} />
+            </form>
           </div>
           <div className="header-chosen">
             <img src="star.svg" alt="" />
