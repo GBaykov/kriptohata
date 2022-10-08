@@ -3,23 +3,42 @@
   min-height: 100px;
   display: flex;
   background-color: #e5e5e5;
+  box-sizing: border-box;
 }
 
 .header-wrapper {
-  margin: 20px 64px 0px 88px;
+  padding: 0px 64px 0px 88px;
 }
 .header-content {
   display: flex;
   flex-direction: column;
+  width: inherit;
 }
 .header__top {
   display: flex;
+  justify-content: space-between;
+  background-color: #1a1b4b;
+  color: #ffffff;
+  height: 48px;
+  align-items: center;
 }
 .header-right {
   display: flex;
+  align-items: center;
 }
 .header-center {
   display: flex;
+}
+.bord {
+  width: 1px;
+  height: 28px;
+  background: #ffffff;
+}
+/* .header-right-item {
+  align-items: center;
+} */
+.header-right-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .header-videocards {

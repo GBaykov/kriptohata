@@ -21,17 +21,17 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div className="header-wrapper header-content">
-        <div className="header__top top">
+      <div className="header-content">
+        <div className="header__top top header-wrapper ">
           <div className="top__local-choices choices">
-            <div className="choices-country choice">
+            <div className="choices-country choice header-right-item">
               Страна
               <select name="country">
                 <option value="1">Россия</option>
                 <option value="2">Беларусь</option>
               </select>
             </div>
-            <div className="choices-currency choice">
+            <div className="choices-currency choice header-right-item">
               Валюта
               <select name="currency">
                 <option value="1">Рубли</option>
@@ -40,21 +40,31 @@ const Header = () => {
             </div>
           </div>
           <div className="header-right right">
-            <p className="right-phone1">+7-926-953-02-69</p>
-            <p className="right-phone2">+375-25-654-23-66</p>
-            <p className="right-backcall">Обратный звонок</p>
-            <div className="right-messengers mess">
+            <p className="right-phone1 header-right-item">
+              <span className="header-right-item"> +7-926-953-02-69</span>
+              <img src="tg-img.svg" alt="" />
+            </p>
+            <span className="bord header-right-item" />
+            <p className="right-phone2 header-right-item">
+              <span className="header-right-item"> +375-25-654-23-66</span>
+              <img src="tg-img.svg" alt="" />
+            </p>
+            <span className="bord header-right-item" />
+            <p className="right-backcall header-right-item">Обратный звонок</p>
+            <span className="bord header-right-item" />
+            <div className="right-messengers mess header-right-item">
               <p className="mess-images">
-                <img className="insta" src="insta.svg" alt="" />
-                <img className="viber" src="viber.svg" alt="" />
+                <img className="insta header-right-item" src="insta.svg" alt="" />
+                <img className="viber " src="viber.svg" alt="" />
               </p>
             </div>
-            <p className="right-accaunt">
+            <span className="bord header-right-item" />
+            <p className="right-accaunt header-right-item">
               <img src="user.svg" alt="" />
             </p>
           </div>
         </div>
-        <div className="header-center">
+        <div className="header-center header-wrapper">
           <p className="header-logo">
             <img src="image.svg" alt="header-logo" />
             КриптоХата
@@ -72,7 +82,7 @@ const Header = () => {
           </div>
         </div>
 
-        <div className="header-nav">
+        <div className="header-nav header-wrapper">
           <NavLink to="/videocards" className="header-videocards header-item">
             Видеокарты
           </NavLink>
