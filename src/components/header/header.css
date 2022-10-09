@@ -1,12 +1,113 @@
 .header {
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   display: flex;
   background-color: #e5e5e5;
+  box-sizing: border-box;
 }
 
 .header-wrapper {
-  margin: 20px 64px 0px 88px;
+  padding: 0px 64px 0px 88px;
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1a1b4b;
+  color: #ffffff;
+  height: 48px;
+  align-items: center;
+}
+.header-right {
+  display: flex;
+  align-items: center;
+}
+.header-center {
+  display: flex;
+}
+.bord {
+  width: 1px;
+  height: 28px;
+  background: #ffffff;
+}
+/* .header-right-item {
+  align-items: center;
+} */
+.header-right-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.choices {
+  display: flex;
+}
+
+.header-center {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-logo {
+  color: #f94f01;
+  display: flex;
+  align-items: center;
+}
+.header-logo-img {
+  margin-right: 8px;
+}
+.header-searchbar {
+}
+
+.header-searchbar-input {
+  width: 622px;
+  height: 48px;
+  border: 0.3px solid #3c3b61;
+  border-radius: 50px;
+  background-color: '#ffffff';
+  background-image: "url('./public/glass.svg') no-repeat center scroll 17px 17px";
+
+  padding-left: 30px;
+}
+
+.actions {
+  display: flex;
+}
+.action {
+  position: relative;
+  text-align: center;
+  vertical-align: bottom;
+  color: #4a5bcf;
+}
+.action-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  height: 18px;
+  background: #f94f01;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+}
+.actions-chosen {
+  margin-right: 22px;
+  width: 75px;
+  height: 47px;
+}
+.actions-basket {
+}
+
+.header-nav {
+  width: 100%;
+  height: 82px;
+  /* display: inline-block; */
+  /* vertical-align: middle; */
+  background-color: #ffffff;
 }
 
 .header-videocards {
@@ -20,6 +121,8 @@
   font-weight: 500;
   font-size: 17px;
   line-height: 16px;
+  display: inline-block;
+  vertical-align: middle;
   color: #1a1b4b;
   margin: 29px 0px;
   text-decoration: none;
@@ -32,8 +135,4 @@
 }
 .active {
   color: #4a5bcf;
-}
-
-.choices {
-  display: flex;
 }
