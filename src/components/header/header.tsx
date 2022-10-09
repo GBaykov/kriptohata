@@ -19,6 +19,11 @@ const Header = () => {
     dispatch(addInputvalue(inputValue));
   };
 
+  // const searchbarinput = {
+  //   background: `url('glass.svg') no-repeat scroll 7px 7px`,
+  //   backgroundColor: '#ffffff',
+  // };
+
   return (
     <header className="header">
       <div className="header-content">
@@ -66,19 +71,34 @@ const Header = () => {
         </div>
         <div className="header-center header-wrapper">
           <p className="header-logo">
-            <img src="image.svg" alt="header-logo" />
-            КриптоХата
+            <img className="header-logo-img" src="image.svg" alt="header-logo" />
+            <span className="header-logo-text">
+              Крипто<b>Хата</b>
+            </span>
           </p>
-          <div className="header-searchbar">
-            <form action="" onSubmit={onFormSubnit}>
-              <input type="text" onChange={onInputChange} value={inputValue} />
-            </form>
-          </div>
-          <div className="header-chosen">
-            <img src="star.svg" alt="" />
-          </div>
-          <div className="header-basket">
-            <img src="basket.svg" alt="" />
+
+          <form className="header-searchbar" action="" onSubmit={onFormSubnit}>
+            <input
+              // style={searchbarinput}
+              className="header-searchbar-input"
+              type="text"
+              placeholder="Поиск"
+              onChange={onInputChange}
+              value={inputValue}
+            />
+          </form>
+
+          <div className="headder-center__actions actions">
+            <div className="actions-chosen action">
+              <img src="star.svg" alt="" />
+              <p>Избранное</p>
+              <p className="action-count">3</p>
+            </div>
+            <div className="actions-basket action">
+              <img src="basket.svg" alt="" />
+              <p>Корзина</p>
+              <p className="action-count">1</p>
+            </div>
           </div>
         </div>
 
