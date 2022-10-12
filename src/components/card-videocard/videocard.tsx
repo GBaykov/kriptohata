@@ -33,7 +33,7 @@ function Videocard(props: VideocardProps) {
     backgroundRepeat: 'no-repeat',
     color: '#0C0C0C',
     backgroundColor: '#E9E9E9',
-    width: '301px',
+    width: '100%',
     height: '240px',
   };
 
@@ -41,9 +41,11 @@ function Videocard(props: VideocardProps) {
     <div className="videocard">
       <div className="videocard__content content">
         <div className="content-view" style={viewStyle}>
-          <p className="content-view__crypto">{videocard.cryptType.join(', ')}</p>
-          <p className="content-view__chosen"></p>
-          <p className="content-view__image">dfdfd</p>
+          <div className="contents-view__top">
+            <p className="content-view__crypto">{videocard.cryptType.join(', ')}</p>
+            <p className="content-view__chosen"></p>
+          </div>
+          {/* <p className="content-view__image">dfdfd</p> */}
           <p className="content-view__order">Под заказ</p>
         </div>
         <div className="content-discription card-disc">
