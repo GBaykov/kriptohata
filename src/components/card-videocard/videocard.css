@@ -36,17 +36,10 @@
   height: 32px;
   background-color: black;
   border-radius: 50%;
-  /* position: absolute;
-  top: 0;
-  right: 0; */
 }
 .content-view__image {
-  /* background-image: no-repeat center 100px 100px; */
 }
 .content-view__order {
-  /* position: absolute;
-  bottom: 0;
-  left: 0; */
 }
 .content-discription {
 }

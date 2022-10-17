@@ -45,7 +45,6 @@ function Videocard(props: VideocardProps) {
             <p className="content-view__crypto">{videocard.cryptType.join(', ')}</p>
             <p className="content-view__chosen"></p>
           </div>
-          {/* <p className="content-view__image">dfdfd</p> */}
           <p className="content-view__order">Под заказ</p>
         </div>
         <div className="content-discription card-disc">
