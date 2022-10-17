@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './videocard.css';
 
-interface IVideocard {
+export interface IVideocard {
   image: string;
   cryptType: string[];
   availability?: boolean;
