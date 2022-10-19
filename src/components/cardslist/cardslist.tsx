@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IVideocard } from '../card-videocard/videocard';
+import Videocard, { IVideocard } from '../card-videocard/videocard';
 import './cardslist.css';
 
 export interface IcardsList {
@@ -11,8 +11,11 @@ function CardsList(props: IcardsList) {
   // const {increment} = cardSlice.actions
   // const dispatch = useAppDispatch();
   const { cards } = props;
+  const cardlist = cards.map((card) => {
+    return <Videocard videocard={card} key={card.name} />;
+  });
 
-  return <section className="cardslist">{cards.map((card) => {})}</section>;
+  return <section className="cardslist">{cardlist}</section>;
 }
 
 export default CardsList;
