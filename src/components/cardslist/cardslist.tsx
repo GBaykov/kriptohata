@@ -12,7 +12,7 @@ function CardsList(props: IcardsList) {
   // const dispatch = useAppDispatch();
   const { cards } = props;
   const cardlist = cards.map((card) => {
-    return <Videocard videocard={card} key={card.name} />;
+    return <Videocard videocard={card} key={Math.random() * Math.random()} />;
   });
 
   return <section className="cardslist">{cardlist}</section>;

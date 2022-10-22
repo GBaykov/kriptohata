@@ -48,19 +48,26 @@ function Videocard(props: VideocardProps) {
           <p className="content-view__order">Под заказ</p>
         </div>
         <div className="content-discription card-disc">
-          <p className="card-disc-name">{videocard.name}</p>
+          <p className="card-disc-name">
+            <strong>{videocard.name}</strong>
+          </p>
           <p className="card-disc-type">Видеокарта</p>
           <div className="card-disc__items items">
             <p className="items-text">
-              Производитель: <span>{videocard.maker}</span>
+              <strong>Производитель:</strong> <span>{videocard.maker}</span>
             </p>
             <p className="items-text">
-              Видеопамять:<span>{videocard.memory} Гб</span>
+              <strong>Видеопамять:</strong>
+              <span>{videocard.memory} Гб</span>
             </p>
           </div>
           <p className="card-disc__cost">
-            <span> $</span>
-            <span>{videocard.cost}</span>
+            <span className="current-cost"> $</span>
+            <span className="current-cost">{videocard.cost * 0.98}</span>
+            <span className="deleted-cost"> $</span>
+            <span className="deleted-cost">
+              <del>{videocard.cost}</del>
+            </span>
           </p>
         </div>
         <div className="videocard__counter counter">
