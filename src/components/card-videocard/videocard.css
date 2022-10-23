@@ -80,6 +80,8 @@
   line-height: 24px;
 }
 .videocard__counter {
+  box-sizing: border-box;
+  padding: 8px;
   margin-bottom: 14px;
 }
 .counter {
