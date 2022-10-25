@@ -1,10 +1,6 @@
 import React from 'react';
+import Videocard from '../card-videocard';
 
 export const HomePage = () => {
-  return (
-    <section className="home">
-      <h1 className="home-title">HomePage</h1>
-      <div className="home-main">HomePage</div>
-    </section>
-  );
+  return <section className="home">{/* <Videocard videocard={videocard} /> */}</section>;
 };
