@@ -73,22 +73,25 @@ function Videocard(props: VideocardProps) {
         <div className="videocard__counter counter">
           <p className="counter-count">{count}</p>
           <p className="counter-control control">
-            <span
-              className="control-minus control-change"
-              onClick={() => {
-                setCount(count - 1);
-              }}
-            >
-              -
-            </span>
-            <span
+            <button
               className="control-plus control-change"
               onClick={() => {
                 setCount(count + 1);
               }}
             >
-              +
-            </span>
+              {/* <span className="control-minus-dash"></span>
+              <span className="control-plus-dash"></span> */}
+              <span className="plus"></span>
+            </button>
+            <span className="vertical-barear"></span>
+            <button
+              className="control-minus control-change"
+              onClick={() => {
+                setCount(count - 1);
+              }}
+            >
+              <span className="control-minus-dash"></span>
+            </button>
           </p>
         </div>
         <div className="add-videocard">
