@@ -25,11 +25,8 @@ function Videocard(props: VideocardProps) {
 
   const backgroundImage = videocard.image ? videocard.image : 'img_default.png';
   const viewStyle = {
-    // background: backgroundImage,
-    // backgroundImage: backgroundImage,
     backgroundImage: `url(${backgroundImage})`,
     backgroundPosition: 'center',
-    // backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     color: '#0C0C0C',
     backgroundColor: '#E9E9E9',
@@ -43,7 +40,21 @@ function Videocard(props: VideocardProps) {
         <div className="content-view" style={viewStyle}>
           <div className="contents-view__top">
             <p className="content-view__crypto">{videocard.cryptType.join(', ')}</p>
-            <p className="content-view__chosen"></p>
+            <p className="content-view__chosen">
+              <svg
+                className="chosen-star"
+                width="20"
+                height="19"
+                viewBox="0 0 20 19"
+                fill="#4A5BCF"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 7.24L12.81 6.62L10 0L7.19 6.63L0 7.24L5.46 11.97L3.82 19L10 15.27L16.18 19L14.55 11.97L20 7.24ZM10 13.4L6.24 15.67L7.24 11.39L3.92 8.51L8.3 8.13L10 4.1L11.71 8.14L16.09 8.52L12.77 11.4L13.77 15.68L10 13.4Z"
+                  fill="#4A5BCF"
+                />
+              </svg>
+            </p>
           </div>
           <p className="content-view__order">Под заказ</p>
         </div>

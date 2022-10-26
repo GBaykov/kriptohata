@@ -1,6 +1,7 @@
 import React from 'react';
 import { IVideocard } from '../card-videocard/videocard';
 import CardsList from '../cardslist';
+import './page.css';
 
 export const VideocardsPage = () => {
   const videocard: IVideocard = {

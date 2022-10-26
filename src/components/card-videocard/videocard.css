@@ -7,6 +7,10 @@
   border: 1px solid #d0d0d0;
   border-radius: 6px;
 }
+
+.videocard:not(:last-child) {
+  margin: 0px 20px 20px 0px;
+}
 .videocard__content {
 }
 .content {
@@ -33,9 +37,33 @@
 .content-view__chosen {
   width: 32px;
   height: 32px;
-  background-color: black;
+  /* background: url('../../../public/star.svg') center no-repeat; */
+  background-color: #e9eef5;
+  border: 0.5px solid #4a5bcf;
   border-radius: 50%;
+  position: relative;
 }
+.content-view__chosen > svg {
+  /* width: 32px;
+  height: 32px;
+  background: url('../../../public/star.svg') center no-repeat;
+  background-color: #e9eef5;
+  border: 0.5px solid #4a5bcf;
+  border-radius: 50%; */
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.content-view__chosen:hover {
+  background-color: #4a5bcf;
+  cursor: pointer;
+}
+.content-view__chosen:hover > svg > path {
+  fill: #ffffff;
+}
+/* .chosen-star:hover > path {
+  fill: #ffffff;
+} */
 .content-view__image {
 }
 .content-view__order {
@@ -81,7 +109,7 @@
 }
 .videocard__counter {
   box-sizing: border-box;
-  padding: 8px;
+  padding: 0px 8px;
   margin-bottom: 14px;
 }
 .counter {
@@ -197,7 +225,7 @@
 
 .add-videocard {
   box-sizing: border-box;
-  padding: 8px;
+  padding: 0px 8px;
   margin-bottom: 16px;
 }
 .add-btn {
