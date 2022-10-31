@@ -1,0 +1,14 @@
+.footer {
+  box-sizing: border-box;
+  /* padding: 60px 0 20px 0; */
+  background-color: #1a1b4b;
+  width: 100%;
+  color: #ffffff;
+}
+.footer__content {
+  padding: 60px 88px;
+}
+.footer__copyright {
+  border-top: solid 0.5px #dbdbdb;
+  padding: 20px 88px;
+}
