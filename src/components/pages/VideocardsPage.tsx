@@ -26,8 +26,10 @@ export const VideocardsPage = () => {
 
   return (
     <section className="videocards">
-      <h1 className="videocards-title">VideocardsPage</h1>
-      <div className="videocards-main">VideocardsPage</div>
+      <p className="videocards-title">
+        Главная / <b> Видеокарты</b>
+      </p>
+      <div className="videocards-main">Видеокарты</div>
       <CardsList cards={cards} />
     </section>
   );

@@ -6,11 +6,12 @@
 
   border: 1px solid #d0d0d0;
   border-radius: 6px;
+  margin: 0px 10px 20px 10px;
 }
 
-.videocard:not(:last-child) {
+/* .videocard:not(:last-child) {
   margin: 0px 20px 20px 0px;
-}
+} */
 .videocard__content {
 }
 .content {
