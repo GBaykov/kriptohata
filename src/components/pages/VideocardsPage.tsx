@@ -25,12 +25,12 @@ export const VideocardsPage = () => {
   ];
 
   return (
-    <section className="videocards">
+    <main className="main videocards">
       <p className="videocards-title">
         Главная / <b> Видеокарты</b>
       </p>
       <div className="videocards-main">Видеокарты</div>
       <CardsList cards={cards} />
-    </section>
+    </main>
   );
 };
