@@ -3,7 +3,7 @@ import './footer.css';
 
 function Footer() {
   return (
-    <section className="footer">
+    <footer className="footer">
       <div className="footer-wrapper">
         <div className="footer__content content">
           <p className="content-logo">
@@ -22,7 +22,9 @@ function Footer() {
             </a>
           </div>
           <div className="content__contacts contacts">
-            <a href="mailto:sales@company.com">sales@company.com</a>
+            <a className="contacts-email" href="mailto:sales@company.com">
+              sales@company.com
+            </a>
             <p className="contacts-icons icons">
               <a className="icons-item">
                 <img src="insta.svg" alt="" />
@@ -47,7 +49,7 @@ function Footer() {
           <p className="copyright-text">Копирайтинг © 2022 КриптоХата. Все права защищены.</p>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
 
