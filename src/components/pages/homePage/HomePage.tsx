@@ -20,6 +20,18 @@ export const HomePage = () => {
             </p>
           </div>
         </section>
+        <section className="page__discount discount">
+          <div className="discount__wrapper">
+            <img className="discount-coins" src="coins.png" alt="" />
+            <div className="discount__content">
+              <p className="discount__content-text">
+                <span className="discount__content-percent">%</span>
+                <span>Скидка всем зарегистрированным пользователям</span>
+              </p>
+              <Button isMain={false} text="Зарегистрироваться" />
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

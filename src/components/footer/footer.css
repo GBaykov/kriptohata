@@ -40,7 +40,11 @@
   max-height: 126px;
   justify-content: space-between;
 }
-
+.icons-item:hover {
+  cursor: pointer;
+}
+.footer__content-logo {
+}
 .content-logo {
   color: #f94f01;
   display: flex;
@@ -49,6 +53,15 @@
 }
 .content-logo-img {
   margin-right: 8px;
+}
+.content__buttons {
+  height: 98px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.content__buttons > p {
+  max-width: 125px;
 }
 
 .footer__copyright {
