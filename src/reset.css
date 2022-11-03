@@ -270,3 +270,13 @@ template {
 [hidden] {
   display: none;
 }
+h1 {
+  margin: 0;
+  max-width: 888px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 130%;
+  color: #ffffff;
+}

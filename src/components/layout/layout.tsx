@@ -1,4 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
+import Footer from '../footer';
 import Header from '../header';
 
 const Layout = () => {
@@ -6,7 +7,7 @@ const Layout = () => {
     <>
       <Header />
       <Outlet />
-      <footer>2022</footer>
+      <Footer />
     </>
   );
 };

@@ -1,0 +1,34 @@
+.button {
+  border-radius: 30px;
+  border: none;
+  padding: 11px 32px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.button:hover {
+  background: #2b3db5;
+  cursor: pointer;
+  color: #fff;
+}
+
+.button:active {
+  background: #4d4acf;
+  cursor: pointer;
+  color: #fff;
+}
+
+.main-btn {
+  background-color: #4a5bcf;
+  color: #fff;
+}
+.transparent-btn {
+  background-color: #fff;
+  color: #4a5bcf;
+}

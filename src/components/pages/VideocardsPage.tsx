@@ -1,6 +1,7 @@
 import React from 'react';
 import { IVideocard } from '../card-videocard/videocard';
 import CardsList from '../cardslist';
+import './page.css';
 
 export const VideocardsPage = () => {
   const videocard: IVideocard = {
@@ -24,10 +25,12 @@ export const VideocardsPage = () => {
   ];
 
   return (
-    <section className="videocards">
-      <h1 className="videocards-title">VideocardsPage</h1>
-      <div className="videocards-main">VideocardsPage</div>
+    <main className="main videocards">
+      <p className="videocards-title">
+        Главная / <b> Видеокарты</b>
+      </p>
+      <div className="videocards-main">Видеокарты</div>
       <CardsList cards={cards} />
-    </section>
+    </main>
   );
 };
