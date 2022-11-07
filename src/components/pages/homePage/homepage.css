@@ -7,14 +7,14 @@
 .home-page {
   box-sizing: border-box;
 }
-.home-page-wrapper {
+/* .home-page-wrapper {
   box-sizing: border-box;
-  padding: 0px 88px 110px;
-}
+  padding: 110px 88px;
+} */
 .page__heading-block {
   box-sizing: border-box;
-  margin-right: -88px;
-  margin-left: -88px;
+  /* margin-right: -88px;
+  margin-left: -88px; */
   /* margin-top: -110px; */
   /* width: 100%; */
   min-height: 662px;
@@ -23,7 +23,7 @@
   background-color: #0a0b23;
 }
 .heading-content {
-  padding: 120px 88px;
+  padding: calc(120 / 1440 * 100%) calc(88 / 1440 * 100%);
 }
 
 h1 {
@@ -40,11 +40,13 @@ h1 {
 
 .page__discount {
   box-sizing: border-box;
-  margin-right: -88px;
-  margin-left: -88px;
+
+  /* margin-right: -88px;
+  margin-left: -88px; */
   background-color: #1a1b4b;
 }
 .discount__wrapper {
+  max-width: 1440px;
   display: flex;
 }
 .discount__wrapper > img {
@@ -66,4 +68,63 @@ h1 {
 .discount__content-percent {
   font-weight: 700;
   font-size: 48px;
+}
+
+/* /////////////////////////// */
+
+.page__catalog {
+  box-sizing: border-box;
+  padding: calc(120 / 1440 * 100%) calc(88 / 1440 * 100%);
+}
+.catalog-title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 130%;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  color: #0c0c0c;
+}
+@media (min-width: 1441px) {
+  .catalog-title {
+    margin-left: 150px;
+  }
+}
+@media (min-width: 1920px) {
+  .catalog-title {
+    margin-left: 250px;
+  }
+}
+
+.catalog-content {
+  width: 100%;
+  /* text-align: left; */
+}
+.catalog__cards {
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  gap: 20px;
+}
+.catalog__cards-card {
+  background-color: #4a5bcf;
+  border-radius: 8px;
+}
+
+.catalog__cards-card > p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 74px;
+  color: #ffffff;
+}
+.catalog__cards-card-img {
+}
+.catalog__cards-card > img {
+  width: 100%;
+  /* max-width: 408px; */
 }
