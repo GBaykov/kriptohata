@@ -200,7 +200,38 @@ h1 {
   box-sizing: border-box;
   padding: 80px 0px;
   background: url('../../../../public/homepage/any-quest.png') no-repeat center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .questions__content {
-  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.questions__content-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 130%;
+}
+
+.questions__content-text {
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.questions__content-btns {
+  /* width: 470px; */
+  box-sizing: border-box;
+  /* padding: 0 445px; */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }

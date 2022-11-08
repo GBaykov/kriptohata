@@ -85,8 +85,8 @@ export const HomePage = () => {
               Оставьте запрос и наши специалисты проконсультируют вас по всем интересующим вопросам.
             </p>
             <div className="questions__content-btns">
-              <Button isMain={false} text="Оставить заявку" />
-              <Button isMain={true} text="Написать в Телеграм" />
+              <Button isMain={false} text="Оставить заявку" isBig={true} />
+              <Button isMain={true} text="Написать в Телеграм" isBig={true} />
             </div>
           </div>
         </section>
