@@ -78,6 +78,18 @@ export const HomePage = () => {
             </div>
           </div>
         </section>
+        <section className="page__questions questions">
+          <div className="questions__content">
+            <p className="questions__content-title">Остались вопросы?</p>
+            <p className="questions__content-text">
+              Оставьте запрос и наши специалисты проконсультируют вас по всем интересующим вопросам.
+            </p>
+            <div className="questions__content-btns">
+              <Button isMain={false} text="Оставить заявку" />
+              <Button isMain={true} text="Написать в Телеграм" />
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

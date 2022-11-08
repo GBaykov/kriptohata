@@ -194,3 +194,13 @@ h1 {
   color: #232323;
   margin-bottom: 32px;
 }
+
+/* ////////////////// */
+.questions {
+  box-sizing: border-box;
+  padding: 80px 0px;
+  background: url('../../../../public/homepage/any-quest.png') no-repeat center;
+}
+.questions__content {
+  margin: 0 auto;
+}
