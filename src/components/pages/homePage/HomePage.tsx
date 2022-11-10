@@ -1,5 +1,3 @@
-// import React from 'react';
-// import Videocard from '../../card-videocard';
 import './homepage.css';
 
 import Button from '../../button';
@@ -40,22 +38,16 @@ export const HomePage = () => {
             <p className="catalog-title">Каталог</p>
             <div className="catalog__cards">
               <div className="catalog__cards-card">
-                {/* <p className="catalog__cards-card-img">
-                  {' '} */}
                 <img src="homepage/new-miners.png" alt="new-miners image" />
-                {/* </p> */}
+
                 <p>Майнеры новые</p>
               </div>
               <div className="catalog__cards-card">
-                {/* <p className="catalog__cards-card-img"> */}
                 <img src="homepage/old-miners.png" alt="old-miners image" />
-                {/* </p> */}
                 <p>Майнеры б/у</p>
               </div>
               <div className="catalog__cards-card">
-                {/* <p className="catalog__cards-card-img"> */}
                 <img src="homepage/videocards.png" alt="videocards image" />
-                {/* </p> */}
                 <p>Видеокарты</p>
               </div>
             </div>
