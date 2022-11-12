@@ -3,78 +3,56 @@
   border-radius: 8px;
   width: 301px;
   box-sizing: border-box;
-
+  background: #fff;
   border: 1px solid #d0d0d0;
   border-radius: 6px;
   margin: 0px 10px 20px 10px;
 }
 
-/* .videocard:not(:last-child) {
-  margin: 0px 20px 20px 0px;
-} */
-.videocard__content {
-}
-.content {
-}
 .content-view {
   box-sizing: border-box;
-  /* position: relative; */
   padding: 8px 8px 13px 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 6px;
 }
+
 .contents-view__top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.content-view__crypto {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
-}
+
 .content-view__chosen {
   width: 32px;
   height: 32px;
-  /* background: url('../../../public/star.svg') center no-repeat; */
   background-color: #e9eef5;
   border: 0.5px solid #4a5bcf;
   border-radius: 50%;
   position: relative;
 }
+
 .content-view__chosen > svg {
-  /* width: 32px;
-  height: 32px;
-  background: url('../../../public/star.svg') center no-repeat;
-  background-color: #e9eef5;
-  border: 0.5px solid #4a5bcf;
-  border-radius: 50%; */
   position: absolute;
   top: 20%;
   left: 20%;
 }
+
 .content-view__chosen:hover {
   background-color: #4a5bcf;
   cursor: pointer;
 }
+
 .content-view__chosen:hover > svg > path {
   fill: #ffffff;
 }
-/* .chosen-star:hover > path {
-  fill: #ffffff;
-} */
-.content-view__image {
-}
-.content-view__order {
-}
+
 .content-discription {
   box-sizing: border-box;
   padding: 10px 8px;
 }
-.card-disc {
-}
+
 .card-disc-name {
   font-weight: 700;
   font-size: 20px;
@@ -87,10 +65,7 @@
 .card-disc__items {
   margin-bottom: 12px;
 }
-.items {
-}
-.items-text {
-}
+
 .items-text:not(:last-child) {
   margin-bottom: 4px;
 }
@@ -98,24 +73,29 @@
 .card-disc__cost {
   color: #000000;
 }
+
 .current-cost {
   font-weight: 600;
   font-size: 24px;
   line-height: 140%;
 }
+
 .deleted-cost {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
 }
+
 .videocard__counter {
   box-sizing: border-box;
   padding: 0px 8px;
   margin-bottom: 14px;
 }
+
 .counter {
   display: flex;
 }
+
 .counter-count {
   box-sizing: border-box;
   display: flex;
@@ -130,8 +110,6 @@
   margin-right: 8px;
 }
 
-.counter-control {
-}
 .control {
   width: 171px;
   height: 48px;
@@ -142,11 +120,13 @@
   justify-content: space-around;
   align-items: center;
 }
+
 .control-change {
   background: none;
   border: none;
   position: relative;
 }
+
 .control-change:hover {
   cursor: pointer;
 }
@@ -156,6 +136,7 @@
   border: 2px solid #3a3a3a;
   color: #3a3a3a;
 }
+
 .control-change:active > .plus::after {
   background-color: #3a3a3a;
   border: 2px solid #3a3a3a;
@@ -171,8 +152,8 @@
   width: 1px;
   height: 24px;
 }
+
 .control-minus-dash {
-  /* background: #eaecee; */
   border: 2px solid #828282;
   background-color: #828282;
   border-radius: 25%;
@@ -203,6 +184,7 @@
   right: 5px;
   z-index: 9;
 }
+
 .plus::before {
   content: '';
   position: absolute;
@@ -212,16 +194,10 @@
   border-radius: 25%;
   width: 16px;
   height: 0px;
-  /* margin-left: -15px; */
   left: 50%;
   top: 12px;
   bottom: 5px;
   z-index: 9;
-}
-
-.control-minus {
-}
-.control-plus {
 }
 
 .add-videocard {
@@ -229,6 +205,7 @@
   padding: 0px 8px;
   margin-bottom: 16px;
 }
+
 .add-btn {
   background: #4a5bcf;
   border-radius: 30px;
@@ -237,10 +214,12 @@
   color: #ffffff;
   border: none;
 }
+
 .add-btn:hover {
   background: #2b3db5;
   cursor: pointer;
 }
+
 .add-btn:active {
   background: #4d4acf;
 }
