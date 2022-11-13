@@ -48,8 +48,6 @@ function Footer() {
               {' '}
               <Button isMain={false} text="Войти" />
             </p>
-            {/* <button className="buttons-register"></button>
-            <button className="buttons-login"></button> */}
           </div>
         </div>
         <div className="footer__copyright copyright">

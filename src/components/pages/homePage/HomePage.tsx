@@ -1,6 +1,7 @@
 import './homepage.css';
 
 import Button from '../../button';
+import BLOGS from './blog/blog';
 
 export const HomePage = () => {
   const telegramSVG = `<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,6 +80,41 @@ export const HomePage = () => {
             <div className="questions__content-btns">
               <Button isMain={false} text="Оставить заявку" isBig={true} />
               <Button isMain={true} text="Написать в Телеграм" isBig={true} />
+            </div>
+          </div>
+        </section>
+        <section className="page__blog blog">
+          <div className="blog__content">
+            <p className="blog__content-head">
+              <span className="blog__content-head-title">Блог</span>
+              <span className="blog__content-head-link">
+                {'Посмотреть все'}
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z"
+                    fill="#4A5BCF"
+                  />
+                </svg>
+              </span>
+            </p>
+            <div className="blog__content-body">
+              {BLOGS.map((blogNews) => {
+                return (
+                  <div className="blog__content-news news" key={blogNews.title}>
+                    <img src={blogNews.img} alt="some news of blog" />
+                    <div className="news__content">
+                      <p className="news-title">{blogNews.title}</p>
+                      <p className="news-text">{blogNews.text}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
