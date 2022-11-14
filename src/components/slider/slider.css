@@ -1,0 +1,47 @@
+.slider-block {
+  box-sizing: border-box;
+  padding: calc(110 / 1440 * 100%) calc(88 / 1440 * 100%);
+}
+
+.slider-block__carousel {
+  max-width: 1264px;
+  /* width */
+  max-height: 614px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.carousel__window {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel__window-cardslist {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 1264px;
+  top: calc(50%- 40px);
+}
+.arrow {
+  color: white;
+  /* width: 40px;
+  height: 40px; */
+  padding: 10px;
+  opacity: 0.8;
+  border-radius: 50%;
+  background-color: #4a5bcf;
+  cursor: pointer;
+}
+.arrow:hover {
+  background-color: #2b3db5;
+  opacity: 0.95;
+}

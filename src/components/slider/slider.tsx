@@ -1,5 +1,6 @@
 import Videocard, { IVideocard } from '../card-videocard/videocard';
 import './slider.css';
+import f, { FaChevronLeft, FaChevronRight, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 export interface IcardsList {
   cards: Array<IVideocard>;
@@ -11,12 +12,19 @@ const Slider = (props: IcardsList) => {
     return <Videocard videocard={card} key={Math.random() * Math.random()} />;
   });
 
+  const hendleLeftArrowClick = () => {
+    console.log('left arrow');
+  };
+  const hendleRightArrowClick = () => {
+    console.log('right arrow');
+  };
+
   return (
-    <section className="slider">
-      <div className="slider__content">
-        <p className="slider__content-head">
-          <span className="slider__content-head-title">Рекомендуемые товары</span>
-          <span className="slider__content-head-link">
+    <section className="slider-block">
+      <div className="slider-block__content">
+        <p className="slider-block__content-head">
+          <span className="slider-block__content-head-title">Рекомендуемые товары</span>
+          <span className="slider-block__content-head-link">
             {'Посмотреть все   '}
             <svg
               width="16"
@@ -29,7 +37,23 @@ const Slider = (props: IcardsList) => {
             </svg>
           </span>
         </p>
-        <section className="slider__cardslist">{cardlist}</section>;
+        <section className="slider-block__carousel carousel">
+          <div className="carousel__window">
+            <div
+              className="carousel__window-cardslist"
+              style={{
+                transform: `translateX(0px)`,
+              }}
+            >
+              {cardlist}
+            </div>
+          </div>
+          <div className="arrows">
+            {' '}
+            <FaChevronLeft className="arrow" onClick={hendleLeftArrowClick} />
+            <FaChevronRight className="arrow" onClick={hendleRightArrowClick} />
+          </div>
+        </section>
       </div>
     </section>
   );

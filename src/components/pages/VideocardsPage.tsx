@@ -26,11 +26,11 @@ export const VideocardsPage = () => {
   ];
 
   return (
-    <main className="main videocards">
-      <p className="videocards-title">
+    <main className="main">
+      {/* <p className="videocards-title">
         Главная / <b> Видеокарты</b>
-      </p>
-      <div className="videocards-main">Видеокарты</div>
+      </p> */}
+      {/* <div className="videocards-main">Видеокарты</div> */}
       <Slider cards={cards} />
     </main>
   );
