@@ -88,7 +88,7 @@ export const HomePage = () => {
             <p className="blog__content-head">
               <span className="blog__content-head-title">Блог</span>
               <span className="blog__content-head-link">
-                {'Посмотреть все'}
+                {'Посмотреть все   '}
                 <svg
                   width="16"
                   height="16"

@@ -1,6 +1,6 @@
 export const HowOrderPage = () => {
   return (
-    <section className="howorder">
+    <main className="main howorder">
       <div className="howorder__content content">
         <div className="content-order">
           <h1 className="newminers-title">Как заказать товар?</h1>
@@ -29,6 +29,6 @@ export const HowOrderPage = () => {
           </div>
         </div>
       </div>
-    </section>
+    </main>
   );
 };

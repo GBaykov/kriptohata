@@ -1,6 +1,7 @@
 import React from 'react';
 import { IVideocard } from '../card-videocard/videocard';
 import CardsList from '../cardslist';
+import Slider from '../slider';
 import './page.css';
 
 export const VideocardsPage = () => {
@@ -30,7 +31,7 @@ export const VideocardsPage = () => {
         Главная / <b> Видеокарты</b>
       </p>
       <div className="videocards-main">Видеокарты</div>
-      <CardsList cards={cards} />
+      <Slider cards={cards} />
     </main>
   );
 };
