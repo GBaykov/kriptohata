@@ -23,6 +23,14 @@ export const VideocardsPage = () => {
     videocard,
     videocard,
     videocard,
+    videocard,
+    videocard,
+    videocard,
+    videocard,
+    videocard,
+    videocard,
+    videocard,
+    videocard,
   ];
 
   return (

@@ -1,19 +1,30 @@
 import Videocard, { IVideocard } from '../card-videocard/videocard';
 import './slider.css';
 import f, { FaChevronLeft, FaChevronRight, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { useState } from 'react';
 
 export interface IcardsList {
   cards: Array<IVideocard>;
 }
 
 const Slider = (props: IcardsList) => {
+  const [offSet, setOffSet] = useState(0);
   const { cards } = props;
   const cardlist = cards.map((card) => {
     return <Videocard videocard={card} key={Math.random() * Math.random()} />;
   });
 
-  const hendleLeftArrowClick = () => {
-    console.log('left arrow');
+  const hendleLeftArrowClick = (direction: boolean) => {
+    const minShift = 321;
+    let sliderWindowWidth = 0;
+    const maxWidth = cardlist.length * 321;
+    if (direction === true && offSet < maxWidth) {
+      sliderWindowWidth = offSet - minShift;
+    }
+    if (direction === false) {
+      sliderWindowWidth = offSet + minShift;
+    }
+    setOffSet(sliderWindowWidth);
   };
   const hendleRightArrowClick = () => {
     console.log('right arrow');
@@ -42,7 +53,7 @@ const Slider = (props: IcardsList) => {
             <div
               className="carousel__window-cardslist"
               style={{
-                transform: `translateX(0px)`,
+                transform: `translateX(${offSet}px)`,
               }}
             >
               {cardlist}
@@ -50,8 +61,8 @@ const Slider = (props: IcardsList) => {
           </div>
           <div className="arrows">
             {' '}
-            <FaChevronLeft className="arrow" onClick={hendleLeftArrowClick} />
-            <FaChevronRight className="arrow" onClick={hendleRightArrowClick} />
+            <FaChevronLeft className="arrow" onClick={() => hendleLeftArrowClick(false)} />
+            <FaChevronRight className="arrow" onClick={() => hendleLeftArrowClick(true)} />
           </div>
         </section>
       </div>
