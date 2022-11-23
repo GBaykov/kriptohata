@@ -22,13 +22,17 @@
   height: 100%;
   display: flex;
   gap: 20px;
+  transition: translate;
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
 }
 
 .arrows {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  width: 1264px;
+  width: 100%;
   top: calc(50%- 40px);
 }
 .arrow {

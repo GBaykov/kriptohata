@@ -5,26 +5,31 @@ import { useState } from 'react';
 
 export interface IcardsList {
   cards: Array<IVideocard>;
+  // cardsPerPage: number;
 }
 
-const Slider = (props: IcardsList) => {
+const Slider = ({ cards }: IcardsList) => {
   const [offSet, setOffSet] = useState(0);
-  const { cards } = props;
   const cardlist = cards.map((card) => {
     return <Videocard videocard={card} key={Math.random() * Math.random()} />;
   });
 
-  const hendleLeftArrowClick = (direction: boolean) => {
+  const hendleArrowClick = (direction: boolean) => {
     const minShift = 321;
-    let sliderWindowWidth = 0;
-    const maxWidth = cardlist.length * 321;
-    if (direction === true && offSet < maxWidth) {
-      sliderWindowWidth = offSet - minShift;
-    }
-    if (direction === false) {
-      sliderWindowWidth = offSet + minShift;
-    }
-    setOffSet(sliderWindowWidth);
+    const maxOffset = -((cardlist.length - 4) * 321);
+    // if (direction === true && offSet < maxWidth) {
+    //   sliderWindowWidth = offSet - minShift;
+    // }
+    // if (direction === false) {
+    //   sliderWindowWidth = offSet + minShift;
+    // }
+    setOffSet((currentOffset) => {
+      const newOffset: number = direction
+        ? Math.max(currentOffset - minShift, maxOffset)
+        : Math.min(currentOffset + minShift, 0);
+      console.log(newOffset, maxOffset, 0);
+      return newOffset;
+    });
   };
   const hendleRightArrowClick = () => {
     console.log('right arrow');
@@ -61,8 +66,8 @@ const Slider = (props: IcardsList) => {
           </div>
           <div className="arrows">
             {' '}
-            <FaChevronLeft className="arrow" onClick={() => hendleLeftArrowClick(false)} />
-            <FaChevronRight className="arrow" onClick={() => hendleLeftArrowClick(true)} />
+            <FaChevronLeft className="arrow" onClick={() => hendleArrowClick(false)} />
+            <FaChevronRight className="arrow" onClick={() => hendleArrowClick(true)} />
           </div>
         </section>
       </div>
