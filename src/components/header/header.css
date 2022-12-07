@@ -7,8 +7,14 @@
 }
 
 .header-wrapper {
-  padding: 0px 88px 0px 88px;
+  padding: 0px 6.1% 0px 6.1%;
 }
+@media (max-width: 1124px) {
+  .header-wrapper {
+    padding: 0px 30px 0px 30px;
+  }
+}
+
 .header-content {
   display: flex;
   flex-direction: column;
@@ -34,9 +40,10 @@
   height: 28px;
   background: #ffffff;
 }
-/* .header-right-item {
-  align-items: center;
-} */
+.header-right-item {
+  display: inline-block;
+  vertical-align: center;
+}
 .header-right-item:not(:last-child) {
   margin-right: 10px;
 }
@@ -50,6 +57,9 @@
   padding-bottom: 16px;
   display: flex;
   justify-content: space-between;
+}
+.choices-country {
+  margin-right: 5px;
 }
 .header-logo {
   color: #f94f01;

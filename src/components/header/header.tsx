@@ -1,11 +1,20 @@
+import { toUnicode } from 'punycode';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { isNull } from 'util';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 import { InputSlice } from '../../store/reducers/InputReducer';
 import './header.css';
 
 const Header = () => {
+  // enum Currencu {
+  //   Russian = (<span>&#x20bd;</span>),
+  //   // Belorussian = '&#3647;',
+  // }
+
   const [inputValue, setInputValue] = useState('');
+  const [currencu, setCurrencu] = useState(true);
+  const [location, setLocation] = useState(true);
   const { input } = useAppSelector((state) => state.InputReducer);
   const { addInputvalue } = InputSlice.actions;
   const dispatch = useAppDispatch();
@@ -24,25 +33,27 @@ const Header = () => {
   //   backgroundColor: '#ffffff',
   // };
 
+  function currencyonClick() {
+    setCurrencu(!currencu);
+  }
+
   return (
     <header className="header">
       <div className="header-content">
         <div className="header__top top header-wrapper ">
           <div className="top__local-choices choices">
-            <div className="choices-country choice header-right-item">
-              Страна
-              <select name="country">
-                <option value="1">Россия</option>
-                <option value="2">Беларусь</option>
-              </select>
-            </div>
-            <div className="choices-currency choice header-right-item">
-              Валюта
-              <select name="currency">
-                <option value="1">Рубли</option>
-                <option value="2">Бел.руб</option>
-              </select>
-            </div>
+            <p
+              className="choices-country choice header-right-item"
+              onClick={() => setLocation(!location)}
+            >
+              Страна: {location ? 'Россия' : 'Беларусь'}
+            </p>
+            <p
+              className="choices-currency choice header-right-item"
+              onClick={() => setCurrencu(!currencu)}
+            >
+              Валюта: {currencu ? <span>&#x20bd;</span> : <span>&#3647;</span>}
+            </p>
           </div>
           <div className="header-right right">
             <p className="right-phone1 header-right-item">
