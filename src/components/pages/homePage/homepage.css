@@ -56,6 +56,32 @@
   font-weight: 700;
   font-size: 48px;
 }
+@media (max-width: 1010px) {
+  .page__discount {
+    text-align: center;
+  }
+  .discount__wrapper {
+    padding: 20px 10px;
+  }
+  .discount-coins {
+    display: none;
+  }
+}
+@media (max-width: 675px) {
+  .page__discount {
+    padding: 0;
+  }
+  .discount__content {
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 180px;
+    margin: 0 auto;
+  }
+}
 
 /* /////////////////////////// BLOCK CATALOG*/
 
@@ -96,6 +122,14 @@
   justify-content: center;
   flex-direction: row;
   gap: 20px;
+}
+@media (max-width: 850px) {
+  .page__catalog {
+    padding: calc(100 / 1440 * 100%) calc(30 / 1440 * 100%);
+  }
+  .catalog__cards {
+    flex-wrap: wrap;
+  }
 }
 
 .catalog__cards-card {
@@ -272,6 +306,17 @@ text-align: right; */
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+@media (max-width: 1100px) {
+  .blog__content-body {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 710px) {
+  .blog__content-body {
+    /* flex-direction: column; */
+  }
 }
 .blog__content-news {
   max-width: 301px;
