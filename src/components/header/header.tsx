@@ -28,15 +28,6 @@ const Header = () => {
     dispatch(addInputvalue(inputValue));
   };
 
-  // const searchbarinput = {
-  //   background: `url('glass.svg') no-repeat scroll 7px 7px`,
-  //   backgroundColor: '#ffffff',
-  // };
-
-  function currencyonClick() {
-    setCurrencu(!currencu);
-  }
-
   return (
     <header className="header">
       <div className="header-content">
@@ -46,7 +37,8 @@ const Header = () => {
               className="choices-country choice header-right-item"
               onClick={() => setLocation(!location)}
             >
-              Страна: {location ? 'Россия' : 'Беларусь'}
+              {window.screen.width > 860 ? 'Страна:' : '!!!'}
+              {location ? 'Россия' : 'Беларусь'}
             </p>
             <p
               className="choices-currency choice header-right-item"
@@ -74,13 +66,12 @@ const Header = () => {
                 <img className="viber " src="viber.svg" alt="" />
               </p>
             </div>
-            <span className="bord header-right-item" />
-            <p className="right-accaunt header-right-item">
-              <img src="user.svg" alt="" />
-            </p>
           </div>
         </div>
         <div className="header-center header-wrapper">
+          <div className="burger-btn">
+            <span></span>
+          </div>
           <p className="header-logo">
             <img className="header-logo-img" src="image.svg" alt="header-logo" />
             <span className="header-logo-text">
@@ -88,7 +79,7 @@ const Header = () => {
             </span>
           </p>
 
-          <form className="header-searchbar" action="" onSubmit={onFormSubnit}>
+          {/* <form className="header-searchbar" action="" onSubmit={onFormSubnit}>
             <input
               // style={searchbarinput}
               className="header-searchbar-input"
@@ -97,35 +88,63 @@ const Header = () => {
               onChange={onInputChange}
               value={inputValue}
             />
-          </form>
+          </form> */}
 
           <div className="headder-center__actions actions">
+            {/* right-accaunt header-right-item */}
+            <div className="actions-user action">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21"
+                  stroke="#4a5bcf"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z"
+                  stroke="#4a5bcf"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <p>Профиль</p>
+            </div>
             <div className="actions-chosen action">
               <img src="star.svg" alt="" />
-              <p>Избранное</p>
+              <p className="iconictext">Избранное</p>
               <p className="action-count">3</p>
             </div>
             <div className="actions-basket action">
               <img src="basket.svg" alt="" />
-              <p>Корзина</p>
+              <p className="iconictext">Корзина</p>
               <p className="action-count">1</p>
             </div>
           </div>
         </div>
 
         <div className="header-nav header-wrapper">
-          <NavLink to="/videocards" className="header-videocards header-item">
-            Видеокарты
-          </NavLink>
-          <NavLink to="/newminers" className="header-newminers header-item">
-            Майнеры новые
-          </NavLink>
-          <NavLink to="/oldminers" className="header-oldminers header-item">
-            Майнеры Б/У
-          </NavLink>
-          <NavLink to="/howorder" className="header-oldminers header-item">
-            Как заказать
-          </NavLink>
+          <nav className="header-nav__links nav-links">
+            <NavLink to="/videocards" className="header-videocards header-item">
+              Видеокарты
+            </NavLink>
+            <NavLink to="/newminers" className="header-newminers header-item">
+              Майнеры новые
+            </NavLink>
+            <NavLink to="/oldminers" className="header-oldminers header-item">
+              Майнеры Б/У
+            </NavLink>
+            <NavLink to="/howorder" className="header-oldminers header-item">
+              Как заказать
+            </NavLink>
+          </nav>
         </div>
       </div>
     </header>

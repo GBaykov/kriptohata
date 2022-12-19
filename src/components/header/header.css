@@ -14,6 +14,29 @@
     padding: 0px 30px 0px 30px;
   }
 }
+@media (max-width: 980px) {
+  .header-wrapper {
+    padding: 0px 18px 0px 18px;
+  }
+}
+@media (max-width: 860px) {
+  .header-content {
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-wrap: wrap;
+  }
+  .header__top {
+    /* flex-grow: 3; */
+  }
+  .header-center {
+    /* flex-shrink: 2; */
+    /* width: 50%; */
+  }
+  .header-nav {
+    /* width: 50%; */
+    /* flex-shrink: 2; */
+  }
+}
 
 .header-content {
   display: flex;
@@ -35,6 +58,7 @@
 .header-center {
   display: flex;
 }
+
 .bord {
   width: 1px;
   height: 28px;
@@ -47,6 +71,11 @@
 .header-right-item:not(:last-child) {
   margin-right: 10px;
 }
+@media (max-width: 900px) {
+  .header-right-item:not(:last-child) {
+    margin-right: 6px;
+  }
+}
 
 .choices {
   display: flex;
@@ -57,6 +86,7 @@
   padding-bottom: 16px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .choices-country {
   margin-right: 5px;
@@ -70,10 +100,12 @@
   margin-right: 8px;
 }
 .header-searchbar {
+  flex-basis: 622px;
+  margin: 0 10px;
 }
 
 .header-searchbar-input {
-  width: 622px;
+  width: 85%;
   height: 48px;
   border: 0.3px solid #3c3b61;
   border-radius: 50px;
@@ -85,6 +117,13 @@
 
 .actions {
   display: flex;
+}
+.iconictext {
+  vertical-align: bottom;
+  margin-top: 5px;
+}
+.actions-user {
+  margin-right: 12px;
 }
 .action {
   position: relative;
@@ -115,8 +154,80 @@
 .header-nav {
   height: 82px;
   background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-links {
+  display: flex;
+  flex-direction: row;
 }
 
+.burger-btn {
+  display: none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  color: black;
+  cursor: pointer;
+}
+.burger-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 25px;
+  height: 2px;
+  color: black;
+  background-color: black;
+}
+.burger-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 25px;
+  height: 2px;
+  color: black;
+  background-color: black;
+}
+.burger-btn span {
+  position: absolute;
+  top: 9px;
+  width: 25px;
+  height: 2px;
+  color: black;
+  background-color: black;
+}
+
+.active-nav {
+  transform: translateX(0);
+  transition: all 0.3s;
+}
+
+@media (max-width: 650px) {
+  .header-content {
+    margin-bottom: -80px;
+  }
+  .active-nav {
+    transform: translateX(0);
+    transition: all 0.3s;
+  }
+  .header-nav {
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 120px;
+    transform: translateX(-100%);
+    transition: all 0.3s;
+  }
+  .nav-links {
+    position: fixed;
+    flex-direction: column;
+  }
+  .burger-btn {
+    display: block;
+  }
+}
 .header-videocards {
 }
 .header-newminers {
