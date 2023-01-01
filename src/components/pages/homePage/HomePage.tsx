@@ -94,18 +94,7 @@ export const HomePage = () => {
             </div>
           </div>
         </section>
-        <section className="page__questions questions">
-          <div className="questions__content">
-            <p className="questions__content-title">Остались вопросы?</p>
-            <p className="questions__content-text">
-              Оставьте запрос и наши специалисты проконсультируют вас по всем интересующим вопросам.
-            </p>
-            <div className="questions__content-btns">
-              <Button isMain={false} text="Оставить заявку" isBig={true} />
-              <Button isMain={true} text="Написать в Телеграм" isBig={true} />
-            </div>
-          </div>
-        </section>
+
         <section className="page__blog blog">
           <div className="blog__content">
             <p className="blog__content-head">
@@ -139,6 +128,18 @@ export const HomePage = () => {
                     </div>
                   );
                 })}
+            </div>
+          </div>
+        </section>
+        <section className="page__questions questions">
+          <div className="questions__content">
+            <p className="questions__content-title">Остались вопросы?</p>
+            <p className="questions__content-text">
+              Оставьте запрос и наши специалисты проконсультируют вас по всем интересующим вопросам.
+            </p>
+            <div className="questions__content-btns">
+              <Button isMain={false} text="Оставить заявку" isBig={true} />
+              <Button isMain={true} text="Написать в Телеграм" isBig={true} />
             </div>
           </div>
         </section>

@@ -32,7 +32,8 @@ const Header = () => {
     <header className="header">
       <div className="header-content">
         <div className="header__top top header-wrapper ">
-          <div className="top__local-choices choices">
+          {/* ----- СКОРЕЕ ВСЕГО УДАЛЮ ИЗ-ЗА НЕНАДОБНОСТИ. УСЛОЖНЕНИЕ ЛОГИКИ */}
+          {/* <div className="top__local-choices choices">
             <p
               className="choices-country choice header-right-item"
               onClick={() => setLocation(!location)}
@@ -46,7 +47,7 @@ const Header = () => {
             >
               Валюта: {currencu ? <span>&#x20bd;</span> : <span>&#3647;</span>}
             </p>
-          </div>
+          </div> */}
           <div className="header-right right">
             <p className="right-phone1 header-right-item">
               <span className="header-right-item"> +7-926-953-02-69</span>
@@ -131,7 +132,7 @@ const Header = () => {
         </div>
 
         <div className="header-nav header-wrapper">
-          <nav className="header-nav__links nav-links">
+          <nav className="header-nav__links nav-links ">
             <NavLink to="/videocards" className="header-videocards header-item">
               Видеокарты
             </NavLink>

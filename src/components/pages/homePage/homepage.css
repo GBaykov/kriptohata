@@ -318,6 +318,7 @@ text-align: right; */
     /* flex-direction: column; */
   }
 }
+
 .blog__content-news {
   max-width: 301px;
   border: 1px solid #f6f8fb;
