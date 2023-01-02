@@ -32,22 +32,22 @@ const Header = () => {
     <header className="header">
       <div className="header-content">
         <div className="header__top top header-wrapper ">
-          {/* ----- СКОРЕЕ ВСЕГО УДАЛЮ ИЗ-ЗА НЕНАДОБНОСТИ. УСЛОЖНЕНИЕ ЛОГИКИ */}
-          {/* <div className="top__local-choices choices">
+          <div className="top__local-choices choices">
             <p
               className="choices-country choice header-right-item"
               onClick={() => setLocation(!location)}
             >
-              {window.screen.width > 860 ? 'Страна:' : '!!!'}
+              {window.screen.width > 860 ? 'Страна: ' : '!!!'}
               {location ? 'Россия' : 'Беларусь'}
             </p>
-            <p
+            {/* ----- СКОРЕЕ ВСЕГО УДАЛЮ ИЗ-ЗА НЕНАДОБНОСТИ. УСЛОЖНЕНИЕ ЛОГИКИ */}
+            {/* <p
               className="choices-currency choice header-right-item"
               onClick={() => setCurrencu(!currencu)}
             >
               Валюта: {currencu ? <span>&#x20bd;</span> : <span>&#3647;</span>}
-            </p>
-          </div> */}
+            </p> */}
+          </div>
           <div className="header-right right">
             <p className="right-phone1 header-right-item">
               <span className="header-right-item"> +7-926-953-02-69</span>
@@ -95,6 +95,7 @@ const Header = () => {
             {/* right-accaunt header-right-item */}
             <div className="actions-user action">
               <svg
+                className="action-img"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -116,15 +117,15 @@ const Header = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p>Профиль</p>
+              <p className="iconictext iconictext-profile">Профиль</p>
             </div>
             <div className="actions-chosen action">
-              <img src="star.svg" alt="" />
+              <img className="action-img" src="star.svg" alt="" />
               <p className="iconictext">Избранное</p>
               <p className="action-count">3</p>
             </div>
             <div className="actions-basket action">
-              <img src="basket.svg" alt="" />
+              <img className="action-img" src="basket.svg" alt="" />
               <p className="iconictext">Корзина</p>
               <p className="action-count">1</p>
             </div>
